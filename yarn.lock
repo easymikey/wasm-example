@@ -3175,6 +3175,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"file-loader@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "file-loader@npm:6.2.0"
+  dependencies:
+    loader-utils: ^2.0.0
+    schema-utils: ^3.0.0
+  peerDependencies:
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: faf43eecf233f4897b0150aaa874eeeac214e4f9de49738a9e0ef734a30b5260059e85b7edadf852b98e415f875bd5f12587768a93fd52aaf2e479ecf95fab20
+  languageName: node
+  linkType: hard
+
 "fill-range@npm:^7.0.1":
   version: 7.0.1
   resolution: "fill-range@npm:7.0.1"
@@ -4555,7 +4567,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^2.0.4":
+"loader-utils@npm:^2.0.0, loader-utils@npm:^2.0.4":
   version: 2.0.4
   resolution: "loader-utils@npm:2.0.4"
   dependencies:
@@ -5758,7 +5770,6 @@ __metadata:
   resolution: "react-counter@workspace:packages/react-counter"
   dependencies:
     "@module-federation/typescript": ^3.0.1
-    "@swc/helpers": ^0.5.3
     "@types/react": ^18.2.21
     "@types/webpack": ^5.28.3
     "@types/webpack-dev-server": ^4.7.2
@@ -5767,6 +5778,7 @@ __metadata:
     esbuild-loader: ^4.0.2
     esbuild-register: ^3.5.0
     external-remotes-plugin: ^1.0.0
+    file-loader: ^6.2.0
     html-webpack-plugin: ^5.5.3
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6129,7 +6141,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^3.1.1, schema-utils@npm:^3.2.0":
+"schema-utils@npm:^3.0.0, schema-utils@npm:^3.1.1, schema-utils@npm:^3.2.0":
   version: 3.3.0
   resolution: "schema-utils@npm:3.3.0"
   dependencies:

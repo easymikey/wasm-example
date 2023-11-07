@@ -1,0 +1,20 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"include": [
+		"./src/**/*",
+	],
+	"compilerOptions": {
+		"outDir": "dist",
+		"baseUrl": ".",
+		"paths": {
+			"react_counter/*": [ "../react-counter/dist/@mf-types/*" ],
+			"yew_counter/*": [ "../yew-counter/core/pkg/index.d.ts" ]
+		},
+		"plugins": [ { "name": "typescript-plugin-css-modules" } ],
+	},
+	"exclude": [
+		"node_modules",
+		"./dist/**/*"
+	],
+	"references": [ ]
+}
