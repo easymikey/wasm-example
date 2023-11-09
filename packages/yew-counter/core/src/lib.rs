@@ -1,7 +1,7 @@
-mod app;
-use app::{App, Props};
+mod yew_counter;
 use gloo::utils::document;
 use wasm_bindgen::prelude::*;
+use yew_counter::{Props, YewCounter};
 
 #[wasm_bindgen]
 pub fn run_app(
@@ -14,7 +14,7 @@ pub fn run_app(
         None => return Ok(()),
     };
 
-    yew::Renderer::<App>::with_root_and_props(
+    yew::Renderer::<YewCounter>::with_root_and_props(
         root,
         Props {
             on_increment,
