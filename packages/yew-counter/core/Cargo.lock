@@ -246,25 +246,6 @@ dependencies = [
 
 [[package]]
 name = "gloo"
-version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bfcc48ab4c2db58b3e9d6c9af9eef336c2318dfdf7f75b710c46b2a1855d1a1e"
-dependencies = [
- "gloo-console 0.2.3",
- "gloo-dialogs 0.1.1",
- "gloo-events 0.1.2",
- "gloo-file 0.2.3",
- "gloo-history 0.1.5",
- "gloo-net 0.3.1",
- "gloo-render 0.1.1",
- "gloo-storage 0.2.2",
- "gloo-timers 0.2.6",
- "gloo-utils 0.1.7",
- "gloo-worker 0.3.0",
-]
-
-[[package]]
-name = "gloo"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cd35526c28cc55c1db77aed6296de58677dbab863b118483a27845631d870249"
@@ -555,25 +536,6 @@ dependencies = [
  "gloo-utils 0.1.7",
  "js-sys",
  "serde",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "web-sys",
-]
-
-[[package]]
-name = "gloo-worker"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cdec38f5350e6f71425895382d3f0e5e45ad78b69c9905f097a171b80c73112c"
-dependencies = [
- "bincode",
- "futures",
- "gloo-utils 0.1.7",
- "gloo-worker-macros",
- "js-sys",
- "pinned",
- "serde",
- "thiserror",
  "wasm-bindgen",
  "wasm-bindgen-futures",
  "web-sys",
@@ -1147,9 +1109,9 @@ dependencies = [
 name = "trunk-template"
 version = "0.1.0"
 dependencies = [
- "gloo 0.9.0",
+ "gloo 0.10.0",
  "js-sys",
- "serde-wasm-bindgen 0.5.0",
+ "serde-wasm-bindgen 0.6.1",
  "stylist",
  "wasm-bindgen",
  "web-sys",
