@@ -1,4 +1,5 @@
 mod yew_counter;
+
 use gloo::utils::document;
 use wasm_bindgen::prelude::*;
 use yew_counter::{Props, YewCounter};
