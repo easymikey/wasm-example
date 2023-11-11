@@ -23,7 +23,7 @@
 	"packageManager": "yarn@3.6.3",
 	"name": "shell",
 	"scripts": {
-		"serve": "webpack serve --color"
+		"serve": "webpack serve --color --open"
 	},
 	"sideEffects": false,
 	"version": "0.1.0",
