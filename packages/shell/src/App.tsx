@@ -1,25 +1,45 @@
 import {FC, Suspense, lazy, useEffect, useState} from 'react';
 import styles from './App.module.css';
 
-const ReactCounter = lazy(() => import('react_counter/ReactCounter'));
+type CounterProps = {
+	onIncrement: () => void;
+	onDecrement: () => void;
+};
+const onRejectedComponentHandler = (
+	error: unknown,
+): {
+	default: FC<CounterProps>;
+} => {
+	console.error('Component Failed Loading:', error);
+
+	return {
+		default: () => <div>Failed to Load</div>,
+	};
+};
+
+const ReactCounter = lazy(() =>
+	import('react_counter/ReactCounter').catch(onRejectedComponentHandler),
+);
 
 const YEW_COUNTER = 'yew-counter';
 
-const YewCounter: FC<{
-	id: string;
-	onIncrement: () => void;
-	onDecrement: () => void;
-}> = ({id, onIncrement, onDecrement}) => {
-	useEffect(() => {
-		import('yew_counter/yew')
-			.then((module) => {
-				module.run_app(id, onIncrement, onDecrement);
-			})
-			.catch((err) => console.error(`Module with error: ${err}`));
-	}, []);
+const YewCounter = lazy(() =>
+	import('yew_counter/yew')
+		.then((module) => {
+			const YewCounter: FC<CounterProps> = ({
+				onDecrement,
+				onIncrement,
+			}) => {
+				useEffect(() => {
+					module.run_app(YEW_COUNTER, onIncrement, onDecrement);
+				}, []);
 
-	return <div id={id} />;
-};
+				return <div id={YEW_COUNTER} />;
+			};
+			return {default: YewCounter};
+		})
+		.catch(onRejectedComponentHandler),
+);
 
 const App: FC = () => {
 	const [counter, setCounter] = useState(0);
@@ -40,7 +60,6 @@ const App: FC = () => {
 				<div className={styles.counter}>{counter}</div>
 				<Suspense fallback="Loading YewCounter">
 					<YewCounter
-						id={YEW_COUNTER}
 						onIncrement={onIncrement}
 						onDecrement={onDecrement}
 					/>
