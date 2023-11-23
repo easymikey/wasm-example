@@ -1,6 +1,10 @@
 {
 	"name": "yew-counter",
-	"packageManager": "yarn@3.6.3",
+	"version": "0.1.0",
+	"sideEffects": false,
+	"scripts": {
+		"serve": "webpack serve --color"
+	},
 	"devDependencies": {
 		"@types/webpack": "^5.28.3",
 		"@types/webpack-dev-server": "^4.7.2",
@@ -11,11 +15,7 @@
 		"webpack-cli": "^5.1.4",
 		"webpack-dev-server": "^4.15.1"
 	},
-	"scripts": {
-		"serve": "webpack serve --color"
-	},
-	"sideEffects": false,
-	"version": "0.1.0",
+	"packageManager": "yarn@3.6.3",
 	"volta": {
 		"node": "20.8.1"
 	}

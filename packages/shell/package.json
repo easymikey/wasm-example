@@ -1,4 +1,10 @@
 {
+	"name": "shell",
+	"version": "0.1.0",
+	"sideEffects": false,
+	"scripts": {
+		"serve": "webpack serve --color --open"
+	},
 	"dependencies": {
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
@@ -21,12 +27,6 @@
 		"webpack-dev-server": "^4.15.1"
 	},
 	"packageManager": "yarn@3.6.3",
-	"name": "shell",
-	"scripts": {
-		"serve": "webpack serve --color --open"
-	},
-	"sideEffects": false,
-	"version": "0.1.0",
 	"volta": {
 		"node": "20.8.1"
 	}
